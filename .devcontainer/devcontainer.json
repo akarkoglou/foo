@@ -13,6 +13,7 @@
 	// "forwardPorts": [5000],
 
 	// Uncomment the next line to run commands after the container is created - for example installing curl.
+	"postStartCommand": "git config --global user.email \"${localEnv:VSCODE_CONTAINER_GIT_EMAIL}\" && git config --global user.name \"${localEnv:VSCODE_CONTAINER_GIT_USER}\"",
 	"postCreateCommand": "pip install --user -r requirements.txt",
 	"customizations": {
 		"vscode": {
@@ -26,10 +27,10 @@
 				"ms-toolsai.jupyter-keymap"
 			]
 		}
-	}
+	},
 
 	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
-	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+	// "runArgs":  ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
 
 	// Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
 	// "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
