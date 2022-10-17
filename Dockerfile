@@ -5,5 +5,4 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 COPY . /app
 
-RUN apt-get update && apt-get install -y python3-pip && apt-get upgrade pip
- 
+RUN apt-get update && apt-get install -y python3-pip && apt-get upgrade -y pip

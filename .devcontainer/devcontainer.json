@@ -13,8 +13,7 @@
 	// "forwardPorts": [5000],
 
 	// Uncomment the next line to run commands after the container is created - for example installing curl.
-	"postStartCommand": "git config --global user.email \"${localEnv:VSCODE_CONTAINER_GIT_EMAIL}\" && git config --global user.name \"${localEnv:VSCODE_CONTAINER_GIT_USER}\"",
-	"postCreateCommand": "pip install --user -r requirements.txt",
+	"postCreateCommand": "pip install --user -r requirements.txt && git config --global user.email \"${localEnv:VSCODE_CONTAINER_GIT_EMAIL}\" && git config --global user.name \"${localEnv:VSCODE_CONTAINER_GIT_USER}\"",
 	"customizations": {
 		"vscode": {
 			"settings": {
